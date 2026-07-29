@@ -14,10 +14,10 @@ import javax.sql.DataSource;
 
 @SpringBootConfiguration
 @EnableAutoConfiguration
-@Import(${project_id.capitalize()}Configuration.class)
+@Import(FirebirdConfiguration.class)
 @PropertySource("classpath:/io/github/makssent/jmix/firebird/test-app.properties")
-@JmixModule(id = "io.github.makssent.jmix.firebird.test", dependsOn = ${project_id.capitalize()}Configuration.class)
-public class ${project_id.capitalize()}TestConfiguration {
+@JmixModule(id = "io.github.makssent.jmix.firebird.test", dependsOn = FirebirdConfiguration.class)
+public class FirebirdTestConfiguration {
 
     @Bean
     @Primary

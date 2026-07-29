@@ -1,4 +1,4 @@
-rootProject.name = '${project_name}'
+rootProject.name = 'jmix-firebird-addon'
 
 include 'firebird'
 include 'firebird-starter'

@@ -20,9 +20,9 @@ import java.util.Collections;
 @ConfigurationPropertiesScan
 @JmixModule(dependsOn = {EclipselinkConfiguration.class, FlowuiConfiguration.class})
 @PropertySource(name = "io.github.makssent.jmix.firebird", value = "classpath:/io/github/makssent/jmix/firebird/module.properties")
-public class ${project_id.capitalize()}Configuration {
+public class FirebirdConfiguration {
 
-    @Bean("${project_id}_${project_id.capitalize()}ViewControllers")
+    @Bean("firebird_FirebirdViewControllers")
     public ViewControllersConfiguration screens(final ApplicationContext applicationContext,
                                                 final AnnotationScanMetadataReaderFactory metadataReaderFactory) {
         final ViewControllersConfiguration viewControllers
@@ -31,7 +31,7 @@ public class ${project_id.capitalize()}Configuration {
         return viewControllers;
     }
 
-    @Bean("${project_id}_${project_id.capitalize()}Actions")
+    @Bean("firebird_FirebirdActions")
     public ActionsConfiguration actions(final ApplicationContext applicationContext,
                                         final AnnotationScanMetadataReaderFactory metadataReaderFactory) {
         final ActionsConfiguration actions

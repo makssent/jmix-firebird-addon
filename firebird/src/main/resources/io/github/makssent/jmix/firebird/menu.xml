@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://jmix.io/schema/flowui/menu">
 
-    <menu id="${project_id}" title="msg://io.github.makssent.jmix.firebird/menu.addon"/>
+    <menu id="firebird" title="msg://io.github.makssent.jmix.firebird/menu.addon"/>
 
 </menu-config>

@@ -7,8 +7,8 @@ buildscript {
     }
 }
 
-group = '${project_group}'
-version = '${project_version}'
+group = 'io.github.makssent'
+version = '0.1.0-SNAPSHOT'
 
 subprojects {
     apply plugin: 'java-library'
@@ -16,14 +16,13 @@ subprojects {
     apply plugin: 'io.jmix'
 
     repositories {
-        mavenCentral()<%if (project_additionalRepositories) {
-        project_additionalRepositories.each { additionalRepository ->%>
-    ${additionalRepository}<%}}%>
+        mavenCentral()
+        maven { url = 'https://global.repo.jmix.io/repository/public' }
     }
 
     jmix {
         bomVersion = '@bomVersion@'
-        projectId = '$project_id'
+        projectId = 'firebird'
     }
 
     group = this.group
