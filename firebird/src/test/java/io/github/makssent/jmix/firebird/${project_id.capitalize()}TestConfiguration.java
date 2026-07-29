@@ -1,4 +1,4 @@
-package ${project_rootPackage};
+package io.github.makssent.jmix.firebird;
 
 import io.jmix.core.annotation.JmixModule;
 import org.springframework.boot.SpringBootConfiguration;
@@ -15,8 +15,8 @@ import javax.sql.DataSource;
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @Import(${project_id.capitalize()}Configuration.class)
-@PropertySource("classpath:/${project_rootPath}/test-app.properties")
-@JmixModule(id = "${project_rootPackage}.test", dependsOn = ${project_id.capitalize()}Configuration.class)
+@PropertySource("classpath:/io/github/makssent/jmix/firebird/test-app.properties")
+@JmixModule(id = "io.github.makssent.jmix.firebird.test", dependsOn = ${project_id.capitalize()}Configuration.class)
 public class ${project_id.capitalize()}TestConfiguration {
 
     @Bean

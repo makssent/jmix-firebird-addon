@@ -1,4 +1,4 @@
-package ${project_rootPackage};
+package io.github.makssent.jmix.firebird;
 
 import io.jmix.core.annotation.JmixModule;
 import io.jmix.core.impl.scanning.AnnotationScanMetadataReaderFactory;
@@ -19,7 +19,7 @@ import java.util.Collections;
 @ComponentScan
 @ConfigurationPropertiesScan
 @JmixModule(dependsOn = {EclipselinkConfiguration.class, FlowuiConfiguration.class})
-@PropertySource(name = "${project_rootPackage}", value = "classpath:/${project_rootPath}/module.properties")
+@PropertySource(name = "io.github.makssent.jmix.firebird", value = "classpath:/io/github/makssent/jmix/firebird/module.properties")
 public class ${project_id.capitalize()}Configuration {
 
     @Bean("${project_id}_${project_id.capitalize()}ViewControllers")
@@ -27,7 +27,7 @@ public class ${project_id.capitalize()}Configuration {
                                                 final AnnotationScanMetadataReaderFactory metadataReaderFactory) {
         final ViewControllersConfiguration viewControllers
                 = new ViewControllersConfiguration(applicationContext, metadataReaderFactory);
-        viewControllers.setBasePackages(Collections.singletonList("${project_rootPackage}"));
+        viewControllers.setBasePackages(Collections.singletonList("io.github.makssent.jmix.firebird"));
         return viewControllers;
     }
 
@@ -36,7 +36,7 @@ public class ${project_id.capitalize()}Configuration {
                                         final AnnotationScanMetadataReaderFactory metadataReaderFactory) {
         final ActionsConfiguration actions
                 = new ActionsConfiguration(applicationContext, metadataReaderFactory);
-        actions.setBasePackages(Collections.singletonList("${project_rootPackage}"));
+        actions.setBasePackages(Collections.singletonList("io.github.makssent.jmix.firebird"));
         return actions;
     }
 }

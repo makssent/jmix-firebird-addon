@@ -1,1 +1,1 @@
-${project_autoConfigurationPackage}.${project_id.capitalize()}AutoConfiguration
+io.github.makssent.jmix.autoconfigure.firebird.${project_id.capitalize()}AutoConfiguration

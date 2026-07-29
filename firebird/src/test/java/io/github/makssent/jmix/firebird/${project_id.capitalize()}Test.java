@@ -1,4 +1,4 @@
-package ${project_rootPackage};
+package io.github.makssent.jmix.firebird;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
