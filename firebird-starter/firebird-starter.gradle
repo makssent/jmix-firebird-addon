@@ -1,5 +1,5 @@
 base {
-    archivesName = '${module_name}-starter'
+    archivesName = 'jmix-firebird-starter'
 }
 
 jmix {
@@ -9,7 +9,7 @@ jmix {
 }
 
 dependencies {
-    api project(':${module_name}')
+    api project(':firebird')
 
     implementation 'io.jmix.core:jmix-core'
     implementation 'io.jmix.data:jmix-data'
