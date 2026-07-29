@@ -3,7 +3,7 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath "io.jmix.gradle:jmix-gradle-plugin:3.0.0-RC1"
+        classpath "io.jmix.gradle:jmix-gradle-plugin:3.0.0"
     }
 }
 
@@ -21,7 +21,7 @@ subprojects {
     }
 
     jmix {
-        bomVersion = '@bomVersion@'
+        bomVersion = '3.0.0'
         projectId = 'firebird'
     }
 
@@ -64,5 +64,6 @@ subprojects {
 
     project.tasks.withType(JavaCompile).configureEach {
         options.compilerArgs.add("-parameters")
+        options.release = 17
     }
 }
