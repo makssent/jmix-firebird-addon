@@ -38,16 +38,6 @@ subprojects {
 
     afterEvaluate {
         publishing {
-            repositories {
-                maven {
-                    url = 'https://myrepo/releases/'
-                    credentials {
-                        username rootProject.hasProperty('uploadUser') ? rootProject['uploadUser'] : 'admin'
-                        password rootProject.hasProperty('uploadPassword') ? rootProject['uploadPassword'] : 'admin'
-                    }
-                    allowInsecureProtocol = true
-                }
-            }
             publications {
                 javaMaven(MavenPublication) {
                     artifactId = project.base.archivesName.get()
