@@ -52,7 +52,9 @@ public class FirebirdDbmsFeatures implements DbmsFeatures {
 
     @Override
     public String getUniqueConstraintViolationPattern() {
-        return "violation of PRIMARY or UNIQUE KEY constraint \"(.+?)\"";
+        return "(?:violation of PRIMARY or UNIQUE KEY constraint"
+                + "|attempt to store duplicate value \\(visible to active transactions\\) in unique index)"
+                + " \"(.+?)\"";
     }
 
     @Override
