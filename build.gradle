@@ -7,13 +7,17 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.vanniktech.maven.publish' version '0.37.0' apply false
+}
+
 group = 'io.github.makssent'
-version = '0.1.0-SNAPSHOT'
+version = '0.1.0'
 
 subprojects {
     apply plugin: 'java-library'
-    apply plugin: 'maven-publish'
     apply plugin: 'io.jmix'
+    apply plugin: 'com.vanniktech.maven.publish'
 
     repositories {
         mavenCentral()
@@ -25,35 +29,59 @@ subprojects {
         projectId = 'firebird'
     }
 
-    group = this.group
-    version = this.version
-
-    java {
-        withSourcesJar()
-    }
-
-    artifacts {
-        archives sourcesJar
-    }
-
-    afterEvaluate {
-        publishing {
-            publications {
-                javaMaven(MavenPublication) {
-                    artifactId = project.base.archivesName.get()
-                    from components.java
-                }
-            }
-        }
-    }
-
-    // remove after https://youtrack.jetbrains.com/issue/IDEA-227215 is fixed
-    tasks.withType(GenerateModuleMetadata) {
-        enabled = false
-    }
+    group = rootProject.group
+    version = rootProject.version
 
     project.tasks.withType(JavaCompile).configureEach {
         options.compilerArgs.add("-parameters")
         options.release = 17
+    }
+
+    tasks.withType(Javadoc).configureEach {
+        options.encoding = 'UTF-8'
+        options.addStringOption('Xdoclint:none', '-quiet')
+    }
+
+    publishing {
+        publications.withType(MavenPublication).configureEach {
+            versionMapping {
+                usage('java-api') { fromResolutionResult() }
+                usage('java-runtime') { fromResolutionResult() }
+            }
+        }
+    }
+
+    mavenPublishing {
+        publishToMavenCentral()
+        signAllPublications()
+
+        coordinates(group.toString(), "jmix-${project.name}", version.toString())
+
+        pom {
+            name = "jmix-${project.name}"
+            description = 'Firebird database support for Jmix applications'
+            url = 'https://github.com/makssent/jmix-firebird-addon'
+            inceptionYear = '2025'
+
+            licenses {
+                license {
+                    name = 'The Apache License, Version 2.0'
+                    url = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+                }
+            }
+            developers {
+                developer {
+                    id = 'makssent'
+                    name = 'makssent'
+                    url = 'https://github.com/makssent'
+                }
+            }
+            scm {
+                url = 'https://github.com/makssent/jmix-firebird-addon'
+                connection = 'scm:git:git://github.com/makssent/jmix-firebird-addon.git'
+                developerConnection = 'scm:git:ssh://git@github.com/makssent/jmix-firebird-addon.git'
+            }
+        }
     }
 }
