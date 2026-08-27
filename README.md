@@ -36,10 +36,9 @@ dependencies {
 
 ### Maven Central
 
-Both add-on modules are published to Maven Central:
+The add-on starter is published to Maven Central:
 
 - [jmix-firebird-starter](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird-starter)
-- [jmix-firebird](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird)
 
 ## Documentation
 
