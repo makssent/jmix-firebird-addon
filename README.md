@@ -4,9 +4,19 @@
 
 ## Compatibility
 
-Add-on version `3.0.0` is compatible with Jmix 3.0.x.
+| Jmix  | Available add-on version |
+| ----- | ------------------------ |
+| 3.0.x | `3.0.0`                  |
 
-The first two version components identify the supported Jmix line: add-on versions `3.0.x` support Jmix 3.0.x, `3.1.x` support Jmix 3.1.x, and `3.2.x` support Jmix 3.2.x. The last component is the add-on release number within that line. For example, `3.0.0` is the first release for Jmix 3.0.x, `3.0.1` is the next release, and `3.1.0` is the first release for Jmix 3.1.x.
+Future add-on versions will follow this pattern:
+
+| Jmix line | Add-on version pattern        |
+| --------- | ----------------------------- |
+| 3.0.x     | `3.0.0`, `3.0.1`, `3.0.2`... |
+| 3.1.x     | `3.1.0`, `3.1.1`, `3.1.2`... |
+| 3.2.x     | `3.2.0`, `3.2.1`, `3.2.2`... |
+
+The first two version components identify the supported Jmix line. The last component is the add-on release number within that line. `3.0.0` is the first release for Jmix 3.0.x, and `3.0.1` will be the next release for the same line. The 3.1.x and 3.2.x rows show the future versioning rule; these versions are not currently available.
 
 ## Installation
 
