@@ -1,8 +1,6 @@
 # Jmix Firebird Add-on
 
-`jmix-firebird-addon` adds Firebird database support to Jmix applications.
-
-The add-on integrates Firebird with the Jmix data layer and EclipseLink. It is intended for Jmix projects that use Firebird as the application database.
+`jmix-firebird-addon` enables Jmix projects to use Firebird as their primary application database.
 
 ## Compatibility
 
