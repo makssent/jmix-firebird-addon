@@ -18,9 +18,12 @@ Future add-on versions will follow this pattern:
 
 The first two version components identify the supported Jmix line. The last component is the add-on release number within that line. `3.0.0` is the first release for Jmix 3.0.x, and `3.0.1` will be the next release for the same line. The 3.1.x and 3.2.x rows show the future versioning rule; these versions are not currently available.
 
-## Installation
+## Usage
 
-Add the Firebird starter and the Jaybird JDBC driver to your project's `build.gradle`:
+To use the add-on, add the following dependencies to your project's `build.gradle`:
+
+- `jmix-firebird-starter`
+- the Jaybird JDBC driver
 
 ```groovy
 dependencies {
@@ -31,7 +34,9 @@ dependencies {
 
 [Jaybird](https://github.com/FirebirdSQL/jaybird) must be added separately. It is the JDBC driver used to connect the application to Firebird.
 
-The add-on is published to Maven Central:
+### Maven Central
+
+Both add-on modules are published to Maven Central:
 
 - [jmix-firebird-starter](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird-starter)
 - [jmix-firebird](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird)
