@@ -8,10 +8,9 @@ The add-on integrates Firebird with the Jmix data layer and EclipseLink. It prov
 
 | Jmix | Add-on | Branch |
 |------|--------|--------|
-| 3.0 | `0.1.0` | `main` |
-| 2.7 | `0.1.0-jmix2.7` | `jmix-2.7` |
+| 3.0.x | `3.0.x` | `main` |
 
-The instructions below are for Jmix 3.0.
+The first two components of the add-on version identify the supported Jmix release line. The patch component identifies the add-on release within that line, starting with `0`. For example, add-on version `3.0.0` is the first release for Jmix 3.0.x.
 
 ## Add the Dependencies
 
@@ -28,7 +27,7 @@ Add the Firebird starter and the Jaybird JDBC driver to the `dependencies` block
 
 ```groovy
 dependencies {
-    implementation 'io.github.makssent:jmix-firebird-starter:0.1.0'
+    implementation 'io.github.makssent:jmix-firebird-starter:3.0.0'
     runtimeOnly 'org.firebirdsql.jdbc:jaybird:6.0.5'
 }
 ```
@@ -43,8 +42,8 @@ runtimeOnly 'org.hsqldb:hsqldb'
 
 Both add-on modules are published to Maven Central:
 
-- [jmix-firebird-starter](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird-starter/0.1.0)
-- [jmix-firebird](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird/0.1.0)
+- [jmix-firebird-starter](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird-starter)
+- [jmix-firebird](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird)
 
 ## Configure the Data Source
 
