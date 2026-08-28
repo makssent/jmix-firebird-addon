@@ -42,6 +42,18 @@ subprojects {
         options.addStringOption('Xdoclint:none', '-quiet')
     }
 
+    tasks.withType(Jar).configureEach {
+        from(rootProject.file('LICENSE')) {
+            into 'META-INF'
+        }
+    }
+
+    tasks.withType(com.vanniktech.maven.publish.tasks.JavadocJar).configureEach {
+        from(rootProject.file('LICENSE')) {
+            into 'META-INF'
+        }
+    }
+
     publishing {
         publications.withType(MavenPublication).configureEach {
             versionMapping {
