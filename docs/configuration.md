@@ -1,7 +1,7 @@
 # Installation and configuration
 
 This guide configures a Jmix application to use Firebird as its primary data store. For the
-supported Jmix, add-on, Firebird, and Java versions, see the
+supported Jmix, add-on, and Firebird versions, see the
 [compatibility table](../README.md#compatibility).
 
 ## Prerequisites

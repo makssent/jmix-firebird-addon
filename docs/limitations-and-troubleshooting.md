@@ -30,7 +30,7 @@ Firebird support is provided by this community add-on and is maintained separate
 Firebird is not one of the databases officially supported by the Jmix team, so new Jmix, Liquibase,
 or EclipseLink releases can introduce compatibility issues that require add-on updates.
 
-The current add-on line targets Firebird 4.0 and 5.0. Jaybird 6 can connect to Firebird 3.0, but the
+The current add-on line targets Firebird 4.0+. Jaybird 6 can connect to Firebird 3.0, but the
 JDBC driver's support range alone does not make the add-on compatible with Firebird 3.0. The add-on
 uses Firebird capabilities introduced in Firebird 4.0, including time-zone data types and modern
 sequence syntax.
@@ -131,4 +131,4 @@ correctly. The upstream fix is tracked in
 
 For extended examples, including manual changelog authoring and a complete application migration,
 see the separate
-[Jmix Firebird tutorial](https://github.com/makssent/jmix-firebird-docs/tree/release_firebird_3.0).
+[Jmix Firebird tutorial](https://github.com/makssent/jmix-firebird-tutorial/tree/release_firebird_3.0).
