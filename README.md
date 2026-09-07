@@ -1,42 +1,53 @@
-# Jmix Firebird Add-on
+[![Apache 2.0 License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
+# Firebird add-on for Jmix
 
-`jmix-firebird-addon` enables Jmix projects to use Firebird as their primary application database.
+The add-on enables Jmix applications to use Firebird as the primary data store.
+
+> [!IMPORTANT]
+> For Firebird projects, Jmix Studio Run Action and automatic Liquibase changelog generation for
+> model changes are unavailable. See
+> [limitations and troubleshooting](docs/limitations-and-troubleshooting.md) for details.
 
 ## Compatibility
 
-| Jmix  | Available add-on version |
-| ----- | ------------------------ |
-| 3.0.x | `3.0.0`                  |
+| Jmix | Add-on | Firebird |
+| --- | --- | --- |
+| 3.0.x | `3.0.1` | 4.0+ |
 
-Future add-on versions will follow this pattern:
+The first two add-on version components identify the supported Jmix line. The last component
+identifies the add-on release within that line.
 
-| Jmix line | Add-on version pattern        |
-| --------- | ----------------------------- |
-| 3.0.x     | `3.0.0`, `3.0.1`, `3.0.2`... |
-| 3.1.x     | `3.1.0`, `3.1.1`, `3.1.2`... |
-| 3.2.x     | `3.2.0`, `3.2.1`, `3.2.2`... |
+## Connecting the add-on
 
-The first two version components match the supported Jmix line. The last component is the add-on release number within that line. `3.0.0` is the first release for Jmix 3.0.x, and `3.0.1` will be the next release for the same line. The 3.1.x and 3.2.x rows show the future versioning rule; these versions are not currently available.
-
-## Usage
-
-To use the add-on, add `jmix-firebird-starter` and the Jaybird JDBC driver to your project's `build.gradle`:
+To manually add the add-on to an existing Jmix project, add the starter to the `dependencies` block
+in `build.gradle`:
 
 ```groovy
 dependencies {
-    implementation 'io.github.makssent:jmix-firebird-starter:3.0.0'
-    runtimeOnly 'org.firebirdsql.jdbc:jaybird:6.0.5'
+    implementation 'io.github.makssent:jmix-firebird-starter:3.0.1'
 }
 ```
 
-[Jaybird](https://github.com/FirebirdSQL/jaybird) must be added separately. It is the JDBC driver used to connect the application to Firebird.
+Include the add-on changelog in the root `changelog.xml` before the Jmix and application changelog
+includes:
 
-### Maven Central
+```xml
+<include file="/io/github/makssent/jmix/firebird/liquibase/changelog.xml"/>
+```
 
-`jmix-firebird-starter` is published to Maven Central:
+The add-on changelog declares Firebird values for Liquibase properties used by the following
+changelogs, so this include must precede them.
 
-- [jmix-firebird-starter](https://central.sonatype.com/artifact/io.github.makssent/jmix-firebird-starter)
+The complete process for configuring a Jmix project for Firebird, including database preparation,
+the JDBC driver, datasource, Jmix properties, Liquibase, and the remaining steps required to start
+the application, is described in the
+[installation and configuration guide](docs/configuration.md).
 
-## Documentation
+## Examples and additional resources
 
-See the [Jmix Firebird documentation](https://github.com/makssent/jmix-firebird-docs/tree/release_firebird_3.0) for complete setup and usage instructions.
+- [jmix-firebird-tutorial](https://github.com/makssent/jmix-firebird-tutorial) - a detailed tutorial
+  and extended documentation for using Jmix with Firebird.
+- [jmix-crm-firebird](https://github.com/makssent/jmix-crm-firebird) - the real `jmix-crm`
+  application adapted to work with Firebird.
+- [jmix-firebird-application](https://github.com/makssent/jmix-firebird-application) - a minimal,
+  ready-to-use Jmix application with Firebird support configured.
