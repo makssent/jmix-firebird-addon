@@ -1,5 +1,7 @@
 # Limitations and troubleshooting
 
+[English](limitations-and-troubleshooting.md) | [Russian](limitations-and-troubleshooting_ru.md)
+
 ## Main limitations when using Firebird
 
 When using Firebird, two Jmix Studio features are unavailable:

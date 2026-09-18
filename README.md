@@ -120,8 +120,10 @@ Firebird projects:
 ```
 
 After changing the entity model, create and include Liquibase changesets manually. Studio cannot
-generate them automatically for Firebird. For known library compatibility issues and startup
-errors, see [limitations and troubleshooting](docs/limitations-and-troubleshooting.md).
+generate them automatically for Firebird.
+
+You can see Jmix adapted for Firebird in action in the
+[tutorial](https://github.com/makssent/jmix-firebird-tutorial).
 
 ## Examples and additional resources
 

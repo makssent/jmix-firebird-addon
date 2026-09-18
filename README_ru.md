@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > Для проектов с Firebird недоступны Run Action в Jmix Studio и автоматическая генерация
 > changelog-файлов Liquibase при изменении модели. Подробнее см. в разделе
-> [ограничения и устранение проблем](docs/limitations-and-troubleshooting.md).
+> [ограничения и устранение проблем](docs/limitations-and-troubleshooting_ru.md).
 
 ## Совместимость
 
@@ -121,9 +121,10 @@ changelog-файлами, поэтому его необходимо подкл�
 ```
 
 После изменения модели сущностей создавайте и подключайте changeset-файлы Liquibase вручную.
-Studio не может генерировать их автоматически для Firebird. Известные проблемы совместимости
-библиотек и ошибки запуска описаны в разделе
-[ограничения и устранение проблем](docs/limitations-and-troubleshooting.md).
+Studio не может генерировать их автоматически для Firebird.
+
+Работу Jmix, адаптированного под Firebird, вы можете посмотреть в
+[туториале](https://github.com/makssent/jmix-firebird-tutorial).
 
 ## Примеры и дополнительные материалы
 
