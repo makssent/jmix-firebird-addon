@@ -14,6 +14,7 @@
 
 | Jmix | Аддон | Firebird |
 | --- | --- | --- |
+| 3.1.x | `3.1.0` | 4.0+ |
 | 3.0.x | `3.0.1` | 4.0+ |
 
 Первые два компонента версии аддона определяют поддерживаемую линейку Jmix. Последний компонент
@@ -32,7 +33,7 @@
 
 ```groovy
 dependencies {
-    implementation 'io.github.makssent:jmix-firebird-starter:3.0.1'
+    implementation 'io.github.makssent:jmix-firebird-starter:3.1.0'
 }
 ```
 

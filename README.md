@@ -14,6 +14,7 @@ The add-on enables Jmix applications to use Firebird as the primary data store.
 
 | Jmix | Add-on | Firebird |
 | --- | --- | --- |
+| 3.1.x | `3.1.0` | 4.0+ |
 | 3.0.x | `3.0.1` | 4.0+ |
 
 The first two add-on version components identify the supported Jmix line. The last component
@@ -32,7 +33,7 @@ For manual installation, add the starter to the `dependencies` block in the appl
 
 ```groovy
 dependencies {
-    implementation 'io.github.makssent:jmix-firebird-starter:3.0.1'
+    implementation 'io.github.makssent:jmix-firebird-starter:3.1.0'
 }
 ```
 

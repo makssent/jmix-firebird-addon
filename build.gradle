@@ -3,7 +3,7 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath "io.jmix.gradle:jmix-gradle-plugin:3.0.0"
+        classpath "io.jmix.gradle:jmix-gradle-plugin:3.1.0"
     }
 }
 
@@ -12,7 +12,7 @@ plugins {
 }
 
 group = 'io.github.makssent'
-version = '3.0.1'
+version = '3.1.0'
 
 subprojects {
     apply plugin: 'java-library'
@@ -25,7 +25,7 @@ subprojects {
     }
 
     jmix {
-        bomVersion = '3.0.0'
+        bomVersion = '3.1.0'
         projectId = 'firebird'
     }
 

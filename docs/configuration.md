@@ -23,7 +23,7 @@ Add the starter and Jaybird to the `dependencies` block in the application's `bu
 
 ```groovy
 dependencies {
-    implementation 'io.github.makssent:jmix-firebird-starter:3.0.1'
+    implementation 'io.github.makssent:jmix-firebird-starter:3.1.0'
     runtimeOnly 'org.firebirdsql.jdbc:jaybird:6.0.5'
 }
 ```
